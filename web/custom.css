@@ -43,10 +43,13 @@ body {
   margin-bottom: 15px;
 }
 .inputs {
+  height: 100%;
+  width: 100%;
+  background-color: white;
   border: 1px solid black;
 }
 .submitbutton{
-  margin-top: 25px;
+  margin-bottom: 25px;
 }
 #accordion h3{
   background:none;

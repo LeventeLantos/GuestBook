@@ -53,10 +53,7 @@
                 </div>
             <?php endforeach; ?>
         </div>
-
       </div>
-
-
       <div class="col mx-auto col1">
            <form action="insert.php" method="post">
              <div class="container inputs">
@@ -76,10 +73,9 @@
                 </div>
 
                <input type="text" name="title" required="required" maxlength="35" placeholder="Title..."/><br/>
-               <textarea class="review_input" type="text" name="body" maxlength="350" required="required" placeholder="Review..."></textarea><br />
+               <textarea class="review_input" type="text" name="body" maxlength="350" required="required" placeholder="Review..."></textarea>
+               <input class="btn btn-outline-dark btn-lg btn-block submitbutton" type="submit" value=" Submit " name="submit"/>
              </div>
-
-             <input class="btn btn-outline-dark btn-lg btn-block submitbutton" type="submit" value=" Submit " name="submit"/><br />
            </form>
       </div>
     </div>
