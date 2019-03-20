@@ -1,0 +1,104 @@
+body {
+  height: 100vh;
+  width: 100%;
+}
+.size {
+  width: auto;
+  height: 100vh;
+}
+.guestbook {
+  height: 80%;
+  width: 70%;
+}
+.col1 {
+  height: 50vh;
+}
+.display {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border: 1px solid black;
+}
+.bg {
+  height: 50%;
+  width: 50%;
+  background-color: white;
+  /*border: 2px solid black;*/
+  text-align: center;
+}
+.dpstars {
+  float: right;
+  font-size: 15px;
+  margin-right: 10px;
+}
+.inner {
+  height: auto;
+  width: auto;
+  background-color: white;
+}
+.review_input {
+  height: 170px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.inputs {
+  border: 1px solid black;
+}
+.submitbutton{
+  margin-top: 25px;
+}
+#accordion h3{
+  background:none;
+  background-color: rgb(189, 189, 189);
+  color: black;
+}
+/* This part is for the star rating */
+.txt-center {
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+.clear {
+  float: none;
+  clear: both;
+}
+.rating {
+    width: 100%;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    position: relative;
+}
+.rating > label {
+    float: none;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 1.1em;
+    cursor: pointer;
+    color: #000;
+    font-size: 40px;
+}
+
+.rating > label:hover,
+.rating > label:hover ~ label,
+.rating > input.radio-btn:checked ~ label {
+    color: transparent;
+}
+.rating > label:hover:before,
+.rating > label:hover ~ label:before,
+.rating > input.radio-btn:checked ~ label:before,
+.rating > input.radio-btn:checked ~ label:before {
+    content: "\2605";
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+}
+.dpstara {
+  -webkit-text-stroke-width: 1px;
+  color: #FFD700;
+  fill: #FFD700;
+}
