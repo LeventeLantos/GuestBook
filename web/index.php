@@ -24,14 +24,11 @@
 <body>
   <div class="container-fluid size">
     <div class="container h-100 guestbook">
-
-
     <div class="row h-100 justify-content-center align-items-center">
       <div class="col-7 mx-auto col1">
-
         <div class="container overflow-auto display" id="accordion">
           <?php
-            $sql = 'SELECT * FROM test01 ORDER BY review_id DESC';
+            $sql = 'SELECT * FROM guestbook ORDER BY review_id DESC';
             $statement = $conn->prepare($sql);
             $statement->execute();
             $test01 = $statement->fetchAll(PDO::FETCH_OBJ);
@@ -39,43 +36,16 @@
             <?php
               //Iterating trough the db
              foreach($test01 as $review): ?>
-
                 <!-- <p>Stars:   </p><br> -->
                 <h3> <b>  <?= $review->title; ?></b><div class="dpstars">
-
-
                 <?php
+                //Shorter form to output the stars
                 $numberOfStars = $review->stars;
-                if ($numberOfStars === 1) {
+                for ($i=0; $i < $numberOfStars; $i++) {
                   echo '<label class="dpstara" >★</label>';
+                }
+                for ($i=0; $i < (5 - $numberOfStars); $i++) {
                   echo '<label class="dpstar" >☆</label>';
-                  echo '<label class="dpstar" >☆</label>';
-                  echo '<label class="dpstar" >☆</label>';
-                  echo '<label class="dpstar" >☆</label>';
-                } if ($numberOfStars === 2) {
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstar" >☆</label>';
-                  echo '<label class="dpstar" >☆</label>';
-                  echo '<label class="dpstar" >☆</label>';
-                }if ($numberOfStars === 3) {
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstar" >☆</label>';
-                  echo '<label class="dpstar" >☆</label>';
-                }if ($numberOfStars === 4) {
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstar" >☆</label>';
-                }if ($numberOfStars === 5) {
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstara" >★</label>';
-                  echo '<label class="dpstara" >★</label>';
                 }
                  ?></div></h3>
                 <div>

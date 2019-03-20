@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     die('It should be not more than 350 character!');
   }
 
-  $sql = 'INSERT INTO test01(title, body, stars) VALUES(:title, :body, :stars)';
+  $sql = 'INSERT INTO guestbook(title, body, stars) VALUES(:title, :body, :stars)';
   $statement = $conn->prepare($sql);
   $statement->execute([':title' => $title, ':body' => $body, ':stars' => $stars]);
   header('Location: /index.php', TRUE, 303);
