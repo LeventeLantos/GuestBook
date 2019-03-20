@@ -22,13 +22,18 @@
   <link rel="stylesheet" type="text/css" href="custom.css">
 </head>
 <body>
+
   <div class="container-fluid size">
+
     <div class="container h-100 guestbook">
-    <div class="row h-100 justify-content-center align-items-center">
+      <div class="title1">
+         <h1>Guestbook</h1>
+      </div>
+    <div class="row h-100 justify-content-center">
       <div class="col-7 mx-auto col1">
         <div class="container overflow-auto display" id="accordion">
           <?php
-            $sql = 'SELECT * FROM guestbook ORDER BY review_id DESC';
+            $sql = 'SELECT * FROM guestbook1 ORDER BY review_id DESC';
             $statement = $conn->prepare($sql);
             $statement->execute();
             $test01 = $statement->fetchAll(PDO::FETCH_OBJ);
@@ -67,7 +72,7 @@
                 <label for="star3" >☆</label>
                 <input id="star2" name="stars" type="radio" value="2" class="radio-btn hide" />
                 <label for="star2" >☆</label>
-                <input id="star1" name="stars" type="radio" value="1" class="radio-btn hide" />
+                <input id="star1" name="stars" type="radio" value="1" class="radio-btn hide" required="required" />
                 <label for="star1" >☆</label>
                 <div class="clear"></div>
                 </div>
