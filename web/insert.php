@@ -1,8 +1,6 @@
 <?php
 include_once('dbconn.php');
 
-
-
 //Insert data to postgres
 if (isset($_POST['submit'])) {
   $title = $_POST['title'];

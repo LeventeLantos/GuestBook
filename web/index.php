@@ -1,4 +1,8 @@
-<?php include_once('dbconn.php'); ?>
+<?php include_once('dbconn.php');
+// $database = new Connection();
+// $db = $database->connect();
+// echo $conn_status;
+ ?>
 <?php include_once('insert.php'); ?>
 
 <!DOCTYPE html>
@@ -28,6 +32,7 @@
     <div class="container h-100 guestbook">
       <div class="title1">
          <h1>Guestbook</h1>
+         <h2><?php echo $conn_status; ?></h2>
       </div>
     <div class="row h-100 justify-content-center">
       <div class="col-7 mx-auto col1">
