@@ -2,8 +2,9 @@
 // $database = new Connection();
 // $db = $database->connect();
 // echo $conn_status;
+var_dump($_SERVER);
  ?>
-<?php include_once('insert.php'); ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +39,7 @@
       <div class="col-7 mx-auto col1">
         <div class="container overflow-auto display" id="accordion">
           <?php
-            $sql = 'SELECT * FROM guestbook1 ORDER BY review_id DESC';
+            $sql = 'SELECT * FROM guestbook1 ORDER BY id DESC';
             $statement = $conn->prepare($sql);
             $statement->execute();
             $test01 = $statement->fetchAll(PDO::FETCH_OBJ);
@@ -82,8 +83,8 @@
                 <div class="clear"></div>
                 </div>
 
-               <input type="text" name="title" required="required" maxlength="35" placeholder="Title..."/><br/>
-               <textarea class="review_input" type="text" name="body" maxlength="350" required="required" placeholder="Review..."></textarea>
+               <input type="text" name="title" required="required" maxlength="35" placeholder="Title"/>
+               <textarea class="review_input" type="text" name="body" maxlength="350" required="required" placeholder="Type you comment here"></textarea>
                <input class="btn btn-outline-dark btn-lg btn-block submitbutton" type="submit" value=" Submit " name="submit"/>
              </div>
            </form>
