@@ -1,6 +1,7 @@
 body {
   height: 90vh;
   width: 100%;
+  background-color: #f3f3f3;
 }
 .size {
   width: 100vw;
@@ -16,8 +17,6 @@ body {
 .display {
   height: 100%;
   width: 100%;
-  background-color: white;
-  border: 1px solid black;
 }
 .bg {
   height: 50%;
@@ -45,15 +44,14 @@ body {
 .inputs {
   height: 100%;
   width: 100%;
-  background-color: white;
-  border: 1px solid black;
+
 }
 .submitbutton{
   margin-bottom: 25px;
 }
 #accordion h3{
   background:none;
-  background-color: rgb(189, 189, 189);
+  background-color: white;
   color: black;
 }
 /* This part is for the star rating */
@@ -102,8 +100,8 @@ body {
 }
 .dpstara {
   -webkit-text-stroke-width: 1px;
-  color: #FFD700;
-  fill: #FFD700;
+  color: #2766d4;
+  fill: #2766d4;
 }
 .title1 {
   text-align: center;

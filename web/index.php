@@ -1,9 +1,9 @@
 <?php include_once('dbconn.php');
-// $database = new Connection();
-// $db = $database->connect();
-// echo $conn_status;
-var_dump($_SERVER);
+$database = new Connection();
+$conn = $database->connect();
+echo $conn_status;
  ?>
+<?php include_once('insert.php'); ?>
 
 
 <!DOCTYPE html>
@@ -38,31 +38,7 @@ var_dump($_SERVER);
     <div class="row h-100 justify-content-center">
       <div class="col-7 mx-auto col1">
         <div class="container overflow-auto display" id="accordion">
-          <?php
-            $sql = 'SELECT * FROM guestbook1 ORDER BY id DESC';
-            $statement = $conn->prepare($sql);
-            $statement->execute();
-            $test01 = $statement->fetchAll(PDO::FETCH_OBJ);
-            ?>
-            <?php
-              //Iterating trough the db
-             foreach($test01 as $review): ?>
-                <!-- <p>Stars:   </p><br> -->
-                <h3> <b>  <?= $review->title; ?></b><div class="dpstars">
-                <?php
-                //Shorter form to output the stars
-                $numberOfStars = $review->stars;
-                for ($i=0; $i < $numberOfStars; $i++) {
-                  echo '<label class="dpstara" >★</label>';
-                }
-                for ($i=0; $i < (5 - $numberOfStars); $i++) {
-                  echo '<label class="dpstar" >☆</label>';
-                }
-                 ?></div></h3>
-                <div>
-                  <p> <i>,,<?= $review->body; ?>"</i></p>
-                </div>
-            <?php endforeach; ?>
+          <?php include_once('read.php'); ?>
         </div>
       </div>
       <div class="col mx-auto col1">
@@ -86,6 +62,7 @@ var_dump($_SERVER);
                <input type="text" name="title" required="required" maxlength="35" placeholder="Title"/>
                <textarea class="review_input" type="text" name="body" maxlength="350" required="required" placeholder="Type you comment here"></textarea>
                <input class="btn btn-outline-dark btn-lg btn-block submitbutton" type="submit" value=" Submit " name="submit"/>
+               <input class="btn btn-outline-dark btn-lg btn-block submitbutton" type="button" value=" Preview " name="preview" onclick="location.href='preview.html';"/>
              </div>
            </form>
       </div>
