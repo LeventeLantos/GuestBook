@@ -33,7 +33,6 @@ echo $conn_status;
     <div class="container h-100 guestbook">
       <div class="title1">
          <h1>Guestbook</h1>
-         <h2><?php echo $conn_status; ?></h2>
       </div>
     <div class="row h-100 justify-content-center">
       <div class="col-7 mx-auto col1">
@@ -46,6 +45,9 @@ echo $conn_status;
              <div class="container inputs">
 
                <div class="rating">
+                 <div class="rate">
+                    <p>Rating</p>
+                 </div>
                 <input id="star5" name="stars" type="radio" value="5" class="radio-btn hide" />
                 <label for="star5" >☆</label>
                 <input id="star4" name="stars" type="radio" value="4" class="radio-btn hide" />
@@ -54,15 +56,15 @@ echo $conn_status;
                 <label for="star3" >☆</label>
                 <input id="star2" name="stars" type="radio" value="2" class="radio-btn hide" />
                 <label for="star2" >☆</label>
-                <input id="star1" name="stars" type="radio" value="1" class="radio-btn hide" required="required" />
+                <input id="star1" name="stars" type="radio" value="1" class="radio-btn hide" />
                 <label for="star1" >☆</label>
                 <div class="clear"></div>
                 </div>
 
                <input type="text" name="title" required="required" maxlength="35" placeholder="Title"/>
                <textarea class="review_input" type="text" name="body" maxlength="350" required="required" placeholder="Type you comment here"></textarea>
-               <input class="btn btn-outline-dark btn-lg btn-block submitbutton" type="submit" value=" Submit " name="submit"/>
-               <input class="btn btn-outline-dark btn-lg btn-block submitbutton" type="button" value=" Preview " name="preview" onclick="location.href='preview.html';"/>
+               <input class="btn btn-primary submitbutton" type="submit" value=" Submit " name="submit"/>
+               <input class="btn btn-primary submitbutton" type="button" value=" Preview " name="preview" onclick="window.open('preview.php');"/>
              </div>
            </form>
       </div>

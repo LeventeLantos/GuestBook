@@ -22,7 +22,6 @@ body {
   height: 50%;
   width: 50%;
   background-color: white;
-  /*border: 2px solid black;*/
   text-align: center;
 }
 .dpstars {
@@ -44,11 +43,15 @@ body {
 .inputs {
   height: 100%;
   width: 100%;
+  border-left: solid grey 2px;
 
 }
 .submitbutton{
   margin-bottom: 25px;
+  width: 49%;
+  background-color: #2766d4;
 }
+
 #accordion h3{
   background:none;
   background-color: white;
@@ -65,23 +68,27 @@ body {
   float: none;
   clear: both;
 }
+.rate {
+  float: left;
+
+  font-size: 20px;
+  color: darkblue;
+}
 .rating {
     width: 100%;
     unicode-bidi: bidi-override;
     direction: rtl;
-    text-align: center;
+    text-align: right;
     position: relative;
 }
 .rating > label {
     float: none;
     display: inline;
-    padding: 0;
-    margin: 0;
     position: relative;
     width: 1.1em;
     cursor: pointer;
     color: #000;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .rating > label:hover,
@@ -104,8 +111,10 @@ body {
   fill: #2766d4;
 }
 .title1 {
-  text-align: center;
+  text-align: left;
+  padding-left: 10px;
   margin-top: 50px;
+  border-left: solid red 4px;.
 }
 .row {
   display: flex;

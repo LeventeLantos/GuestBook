@@ -8,15 +8,18 @@ if (isset($_POST['submit'])) {
   $body = $_POST['body'];
   $stars = $_POST['stars'];
   // Conditions
-  // if (!isset($stars)) {
-  //   die('Didnt set the rating');
-  // }
-  // if (strlen($title) >= 35) {
-  //   die('It shoudnt be more than 35 characters!');
-  // }
-  // if (strlen($body) >= 350) {
-  //   die('It shoudnt be more than 350 characters!');
-  // }
+  if ($stars == null) {
+    die("<script type='text/javascript'>alert('Set some rating!')</script>");
+    header('Location: /index.php', TRUE, 303);
+  }
+  if (strlen($title) >= 35) {
+    die("<script type='text/javascript'>alert('The title exceeded 35 chars!')</script>");
+    header('Location: /index.php', TRUE, 303);
+  }
+  if (strlen($body) >= 350) {
+    die("<script type='text/javascript'>alert('The review exceeded 350 chars!')</script>");
+    header('Location: /index.php', TRUE, 303);
+  }
   // Emoji support part
   $body = str_replace(':smile:','<img src="assets/emojis/smile.png" alt="Smile face emoji" height="15px" width="15px">', $body);
   $body = str_replace(':joy:','<img src="assets/emojis/joy.png" alt="Joy face emoji" height="15px" width="15px">', $body);
