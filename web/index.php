@@ -11,6 +11,9 @@ switch ($request) {
     case '/preview' :
         require __DIR__ . '/preview.php';
         break;
+    case '/insert' :
+        require __DIR__ . '/insert.php';
+        break;
     default:
         require __DIR__ . '/404.php';
         break;

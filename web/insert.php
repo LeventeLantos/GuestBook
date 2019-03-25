@@ -10,15 +10,15 @@ if (isset($_POST['submit'])) {
   // Conditions
   if ($stars == null) {
     die("<script type='text/javascript'>alert('Set some rating!')</script>");
-    header('Location: /index.php', TRUE, 303);
+    header('Location: /view.php', TRUE, 303);
   }
   if (strlen($title) >= 35) {
     die("<script type='text/javascript'>alert('The title exceeded 35 chars!')</script>");
-    header('Location: /index.php', TRUE, 303);
+    header('Location: /view.php', TRUE, 303);
   }
   if (strlen($body) >= 350) {
     die("<script type='text/javascript'>alert('The review exceeded 350 chars!')</script>");
-    header('Location: /index.php', TRUE, 303);
+    header('Location: /view.php', TRUE, 303);
   }
   // Emoji support part
   $body = str_replace(':smile:','<img src="assets/emojis/smile.png" alt="Smile face emoji" height="15px" width="15px">', $body);
@@ -36,5 +36,5 @@ if (isset($_POST['submit'])) {
   $sql = 'INSERT INTO guestbook1(title, body, stars) VALUES(:title, :body, :stars)';
   $statement = $conn->prepare($sql);
   $statement->execute([':title' => $title, ':body' => $body, ':stars' => $stars]);
-  header('Location: /index.php', TRUE, 303);
+  header('Location: /view.php', TRUE, 303);
 }
