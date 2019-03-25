@@ -18,3 +18,4 @@ switch ($request) {
         require __DIR__ . '/404.php';
         break;
 }
+var_dump($REQUEST_URI);

@@ -1,7 +1,8 @@
 <?php include_once('dbconn.php');
 $database = new Connection();
 $conn = $database->connect();
-include_once('insert.php'); ?>
+include_once('insert.php');
+var_dump($_SERVER); ?>
 
 
 <!DOCTYPE html>
