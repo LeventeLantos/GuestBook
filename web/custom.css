@@ -2,6 +2,8 @@ body {
   height: 90vh;
   width: 100%;
   background-color: #f3f3f3;
+  /* font-family: Quicksand-bold; */
+  color: #060459;
 }
 .size {
   width: 100vw;

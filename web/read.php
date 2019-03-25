@@ -13,5 +13,5 @@
       for ($i=0; $i < (5 - $numberOfStars); $i++) {
         echo '<label class="dpstar" >☆</label>';
       }
-       echo '</div></h3><div><p> <i>,,' . $review->body . '"</i></p></div>';
+       echo '</div></h3><div><p>' . $review->body . '</p></div>';
     endforeach;
