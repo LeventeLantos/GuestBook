@@ -1,6 +1,6 @@
 ## Guestbook homework
 
-### Postgres setup
+### Pg setup
 
 -- Table: public.guestbook1
 
